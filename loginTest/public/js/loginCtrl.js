@@ -1,5 +1,5 @@
 
-loginApp.controller('loginCtrl',['$scope','$http',($scope,$http) => {
+loginApp.controller('loginCtrl',['$scope','$http',($scope,$http,$window) => {
 
     $scope.login= () =>
     {
@@ -8,5 +8,10 @@ loginApp.controller('loginCtrl',['$scope','$http',($scope,$http) => {
         }, e => {
             $scope.errorMessage = e.data.message;
         });
-    }
+    };
+    $scope.say = () => {
+      window.alert('Yessss');
+
+  };
+
 }]);
